@@ -77,7 +77,6 @@ class Game {
                 if (--player.stickyFrames === 0) {
                     player.velocity.y = 0;
                     player.locked = false;
-                    console.log('unlock');
                 }
                 return;
             } else {
@@ -86,7 +85,6 @@ class Game {
                 player.velocity.y += ball.position.y > player.bottom ? 400 : 0;
                 player.stickyFrames = getRandomNumBetween(5, 20);
                 player.locked = true;
-                console.log('lock');
             }
 				break;
 		}
@@ -141,7 +139,24 @@ class Game {
 					// Laat bal stuiteren op de x-as
 					ball.velocity.x = -ball.velocity.x;
 
-					// Check of de botsing van bovenaf was
+
+                    const ballY    = ball.position.y   | 0;
+                    const playerY  = player.position.y | 0;
+                    const distance = ballY < playerY ? Math.abs(ballY - playerY) : -Math.abs(ballY - playerY);
+
+                    console.log( 'afstand vanaf midden van bedje: '+distance );
+
+                    if(distance !== 0)  ball.setAngle( player.id===1 ? distance : -distance+180 ); 
+
+                    Math.floor()
+                    Math.random()
+                    Math.ceil()
+                    Math.PI 
+
+                    // Verhoog de snelheid van de bal met 10%
+                    ball.setSpeed( ball.speed*1.1 );
+                    
+				// Check of de botsing van bovenaf was
 				} else if (ball.position.y < player.position.y) {
 					console.log('botsing aan de bovenkant van speler gedetecteerd');
 					ball.position.y = player.top - ball.size.y / 2;
