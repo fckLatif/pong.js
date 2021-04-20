@@ -141,11 +141,14 @@ class Game {
 			}
 		}
 
-		// Check of de bal 'out' is
-		if (ball.right < 0 || ball.left > this.canvas.width) {
-			//console.log( player.id===1 ? 2 : 1 );
-			ball.out = true;
-		}
+        // Check of de bal 'out' is
+        if (ball.right < 0 || ball.left > this.canvas.width) {
+            this.hud.addScore( player.id===1 ? 2 : 1 );
+            ball.out = true;
+            setTimeout(() => {
+                this.ball.reset();
+            }, 1000);
+        }
 
 		// 1=='1'    TRUE
 		// 1==='1'   FALSE
