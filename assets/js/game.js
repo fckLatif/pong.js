@@ -205,7 +205,7 @@ class Game {
 		}
 	}
 
-	drawRectangle(ctx, rect, color = 'white') {
+	drawRectangle(ctx, rect, color = 'lime') {
 		// Stel de kleur in waarmee we willen tekenen
 		ctx.fillStyle = color;
 		// Teken een rechthoek op de canvas

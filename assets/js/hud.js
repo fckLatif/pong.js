@@ -16,8 +16,8 @@ class Hud
             this.edges.push( new Edge(this.canvas.width/2, 20+(i*20), 10, 10) );
         }
 
-        this.score1 = new Label(this.canvas.width/2 - 30, 60, 10, 'white', '0', 'left');
-        this.score2 = new Label(this.canvas.width/2 + 30, 60, 10, 'white', '0', 'right');
+        this.score1 = new Label(this.canvas.width/2 - 30, 60, 10, 'lime', '0', 'left');
+        this.score2 = new Label(this.canvas.width/2 + 30, 60, 10, 'lime', '0', 'right');
 
         this.draw();
     }
