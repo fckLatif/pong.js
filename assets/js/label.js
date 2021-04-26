@@ -1,4 +1,5 @@
-class Label {
+class Label
+{
     constructor(startX=100, startY=100, size=10, color='white', value='test', align='center') {
         this.startX = startX;
         this.startY = startY;

@@ -1,4 +1,5 @@
-class Hud {
+class Hud 
+{
     constructor(game) {
         this.parent  = game;
         this.canvas  = document.getElementById('hud');
@@ -51,12 +52,10 @@ class Hud {
             let rectangle = this.score1.rectangles[r];    
             this.parent.drawRectangle(this.context, rectangle, rectangle.color);
         }
-
+        
         for(let r=0; r<this.score2.rectangles.length; r++) {
             let rectangle = this.score2.rectangles[r];    
             this.parent.drawRectangle(this.context, rectangle, rectangle.color);
         }
-
-
     }
-} 
+}

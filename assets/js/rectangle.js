@@ -1,4 +1,5 @@
-class Rectangle  {
+class Rectangle 
+{
     constructor(x, y, w, h, color) {
         this.position = new Vector(x, y);
         this.size     = new Vector(w, h);
